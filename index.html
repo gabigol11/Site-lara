@@ -1,0 +1,526 @@
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Larabelle - Moda Feminina e Maquiagem</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<link href="../css/css.css" rel="stylesheet"/></head>
+<body>
+<header>
+<div class="header-container">
+<div class="logo">
+<i class="fas fa-gem logo-icon"></i>
+<h1>Larabelle</h1>
+</div>
+<div class="menu-toggle" id="menuToggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav id="nav">
+<ul>
+<li><a class="nav-link active" data-page="home" href="#">Início</a></li>
+<li><a class="nav-link" data-page="makeup" href="#">Maquiagens</a></li>
+<li><a class="nav-link" data-page="clothing" href="#">Roupas</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<!-- Home Page -->
+<section class="page active" id="home">
+<div class="hero">
+<div class="container hero-content">
+<h1>Beleza e Estilo em Cada Detalhe</h1>
+<p>A Larabelle valoriza sua beleza e estilo. Conheça nossa linha exclusiva de roupas e maquiagens pensada para você se sentir única todos os dias.</p>
+<div>
+<a class="btn btn-primary" data-page="makeup" href="#">Ver Maquiagens</a>
+<a class="btn btn-secondary" data-page="clothing" href="#">Ver Roupas</a>
+</div>
+</div>
+</div>
+<div class="about">
+<div class="container about-container">
+<div class="about-image" data-aos="fade-right">
+<svg viewbox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8f9fa" height="400" width="500"></rect>
+<path d="M0,250 Q125,150 250,250 T500,250" fill="#8A2BE2" opacity="0.1"></path>
+<path d="M0,300 Q125,200 250,300 T500,300" fill="#90EE90" opacity="0.1"></path>
+<rect fill="white" height="300" rx="10" stroke="#eee" stroke-width="2" width="300" x="100" y="50"></rect>
+<rect fill="#f0f0f0" height="180" rx="5" width="260" x="120" y="70"></rect>
+<circle cx="250" cy="160" fill="#8A2BE2" opacity="0.7" r="70"></circle>
+<circle cx="250" cy="160" fill="#90EE90" opacity="0.7" r="50"></circle>
+<rect fill="#8A2BE2" height="10" rx="5" width="80" x="120" y="270"></rect>
+<rect fill="#eee" height="10" rx="5" width="260" x="120" y="290"></rect>
+<rect fill="#eee" height="10" rx="5" width="200" x="120" y="310"></rect>
+<rect fill="#eee" height="10" rx="5" width="180" x="120" y="330"></rect>
+</svg>
+</div>
+<div class="about-content" data-aos="fade-left">
+<h2>Sobre a Larabelle</h2>
+<p>Fundada em 2015, a Larabelle nasceu do sonho de criar um espaço onde todas as mulheres pudessem encontrar produtos que realçassem sua beleza natural e expressassem seu estilo único.</p>
+<p>Nossa missão é oferecer roupas e maquiagens de alta qualidade que inspirem confiança e autoestima, sempre com atendimento personalizado e preços acessíveis.</p>
+<p>Na Larabelle, acreditamos que cada mulher é única e merece se sentir especial todos os dias. Por isso, selecionamos cuidadosamente cada peça de roupa e produto de maquiagem, pensando em diferentes estilos, tons de pele e ocasiões.</p>
+<a class="btn btn-primary" data-page="makeup" href="#">Conheça nossos produtos</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Makeup Page -->
+<section class="page products" id="makeup">
+<div class="container">
+<div class="section-title" data-aos="fade-up">
+<h2>Nossas Maquiagens</h2>
+</div>
+<div class="product-filters" data-aos="fade-up">
+<button class="filter-btn active" data-filter="all">Todos</button>
+<button class="filter-btn" data-filter="batom">Batons</button>
+<button class="filter-btn" data-filter="sombra">Sombras</button>
+<button class="filter-btn" data-filter="base">Bases</button>
+<button class="filter-btn" data-filter="blush">Blush</button>
+</div>
+<div class="product-grid">
+<!-- Batom 1 -->
+<div class="product-card" data-aos="fade-up" data-category="batom">
+<div class="product-image">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8f9fa" height="200" width="200"></rect>
+<rect fill="#8A2BE2" height="140" rx="5" width="60" x="70" y="30"></rect>
+<rect fill="#a35df0" height="30" rx="3" width="50" x="75" y="35"></rect>
+<rect fill="#d81b60" height="90" rx="15" width="30" x="85" y="75"></rect>
+<circle cx="100" cy="75" fill="#d81b60" r="15"></circle>
+</svg>
+<span class="product-tag">Novo</span>
+</div>
+<div class="product-info">
+<h3 class="product-name">Batom Matte Violeta</h3>
+<p class="product-category">Batom</p>
+<p class="product-price">R$ 39,90</p>
+<button class="add-to-cart">
+<i class="fas fa-shopping-cart"></i>
+                                Adicionar ao Carrinho
+                            </button>
+</div>
+</div>
+<!-- Batom 2 -->
+<div class="product-card" data-aos="fade-up" data-aos-delay="100" data-category="batom">
+<div class="product-image">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8f9fa" height="200" width="200"></rect>
+<rect fill="#90EE90" height="140" rx="5" width="60" x="70" y="30"></rect>
+<rect fill="#70cc70" height="30" rx="3" width="50" x="75" y="35"></rect>
+<rect fill="#e91e63" height="90" rx="15" width="30" x="85" y="75"></rect>
+<circle cx="100" cy="75" fill="#e91e63" r="15"></circle>
+</svg>
+</div>
+<div class="product-info">
+<h3 class="product-name">Batom Cremoso Rosa</h3>
+<p class="product-category">Batom</p>
+<p class="product-price">R$ 35,90</p>
+<button class="add-to-cart">
+<i class="fas fa-shopping-cart"></i>
+                                Adicionar ao Carrinho
+                            </button>
+</div>
+</div>
+<!-- Sombra 1 -->
+<div class="product-card" data-aos="fade-up" data-aos-delay="200" data-category="sombra">
+<div class="product-image">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8f9fa" height="200" width="200"></rect>
+<rect fill="#8A2BE2" height="80" rx="5" width="120" x="40" y="60"></rect>
+<rect fill="#a35df0" height="70" rx="3" width="110" x="45" y="65"></rect>
+<circle cx="65" cy="85" fill="#9c27b0" r="15"></circle>
+<circle cx="95" cy="85" fill="#673ab7" r="15"></circle>
+<circle cx="125" cy="85" fill="#3f51b5" r="15"></circle>
+<circle cx="65" cy="115" fill="#2196f3" r="15"></circle>
+<circle cx="95" cy="115" fill="#03a9f4" r="15"></circle>
+<circle cx="125" cy="115" fill="#00bcd4" r="15"></circle>
+</svg>
+<span class="product-tag">Promoção</span>
+</div>
+<div class="product-info">
+<h3 class="product-name">Paleta de Sombras Galáxia</h3>
+<p class="product-category">Sombra</p>
+<p class="product-price">R$ 89,90</p>
+<button class="add-to-cart">
+<i class="fas fa-shopping-cart"></i>
+                                Adicionar ao Carrinho
+                            </button>
+</div>
+</div>
+<!-- Base 1 -->
+<div class="product-card" data-aos="fade-up" data-aos-delay="300" data-category="base">
+<div class="product-image">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8f9fa" height="200" width="200"></rect>
+<path d="M70,40 L130,40 L120,160 L80,160 Z" fill="#8A2BE2"></path>
+<path d="M75,45 L125,45 L117,155 L83,155 Z" fill="#f5f5dc"></path>
+<rect fill="white" height="10" rx="5" width="30" x="85" y="60"></rect>
+</svg>
+</div>
+<div class="product-info">
+<h3 class="product-name">Base Líquida Matte</h3>
+<p class="product-category">Base</p>
+<p class="product-price">R$ 59,90</p>
+<button class="add-to-cart">
+<i class="fas fa-shopping-cart"></i>
+                                Adicionar ao Carrinho
+                            </button>
+</div>
+</div>
+<!-- Blush 1 -->
+<div class="product-card" data-aos="fade-up" data-aos-delay="400" data-category="blush">
+<div class="product-image">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8f9fa" height="200" width="200"></rect>
+<circle cx="100" cy="100" fill="#8A2BE2" r="60"></circle>
+<circle cx="100" cy="100" fill="#f8bbd0" r="55"></circle>
+<circle cx="100" cy="100" fill="#f48fb1" opacity="0.7" r="40"></circle>
+<circle cx="100" cy="100" fill="#f06292" opacity="0.7" r="25"></circle>
+</svg>
+</div>
+<div class="product-info">
+<h3 class="product-name">Blush Compacto Rosa</h3>
+<p class="product-category">Blush</p>
+<p class="product-price">R$ 45,90</p>
+<button class="add-to-cart">
+<i class="fas fa-shopping-cart"></i>
+                                Adicionar ao Carrinho
+                            </button>
+</div>
+</div>
+<!-- Sombra 2 -->
+<div class="product-card" data-aos="fade-up" data-aos-delay="100" data-category="sombra">
+<div class="product-image">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8f9fa" height="200" width="200"></rect>
+<rect fill="#90EE90" height="80" rx="5" width="120" x="40" y="60"></rect>
+<rect fill="#70cc70" height="70" rx="3" width="110" x="45" y="65"></rect>
+<circle cx="65" cy="85" fill="#ffd54f" r="15"></circle>
+<circle cx="95" cy="85" fill="#ffb74d" r="15"></circle>
+<circle cx="125" cy="85" fill="#ff9800" r="15"></circle>
+<circle cx="65" cy="115" fill="#ff8a65" r="15"></circle>
+<circle cx="95" cy="115" fill="#ff5722" r="15"></circle>
+<circle cx="125" cy="115" fill="#e64a19" r="15"></circle>
+</svg>
+</div>
+<div class="product-info">
+<h3 class="product-name">Paleta de Sombras Sunset</h3>
+<p class="product-category">Sombra</p>
+<p class="product-price">R$ 79,90</p>
+<button class="add-to-cart">
+<i class="fas fa-shopping-cart"></i>
+                                Adicionar ao Carrinho
+                            </button>
+</div>
+</div>
+<!-- Base 2 -->
+<div class="product-card" data-aos="fade-up" data-aos-delay="200" data-category="base">
+<div class="product-image">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8f9fa" height="200" width="200"></rect>
+<rect fill="#90EE90" height="120" rx="10" width="80" x="60" y="40"></rect>
+<rect fill="#ffe0b2" height="110" rx="8" width="70" x="65" y="45"></rect>
+<circle cx="100" cy="65" fill="white" r="10"></circle>
+</svg>
+<span class="product-tag">Novo</span>
+</div>
+<div class="product-info">
+<h3 class="product-name">Base Cremosa Natural</h3>
+<p class="product-category">Base</p>
+<p class="product-price">R$ 65,90</p>
+<button class="add-to-cart">
+<i class="fas fa-shopping-cart"></i>
+                                Adicionar ao Carrinho
+                            </button>
+</div>
+</div>
+<!-- Blush 2 -->
+<div class="product-card" data-aos="fade-up" data-aos-delay="300" data-category="blush">
+<div class="product-image">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8f9fa" height="200" width="200"></rect>
+<circle cx="100" cy="100" fill="#90EE90" r="60"></circle>
+<circle cx="100" cy="100" fill="#ffcdd2" r="55"></circle>
+<circle cx="100" cy="100" fill="#ef9a9a" opacity="0.7" r="40"></circle>
+<circle cx="100" cy="100" fill="#e57373" opacity="0.7" r="25"></circle>
+</svg>
+</div>
+<div class="product-info">
+<h3 class="product-name">Blush Líquido Coral</h3>
+<p class="product-category">Blush</p>
+<p class="product-price">R$ 49,90</p>
+<button class="add-to-cart">
+<i class="fas fa-shopping-cart"></i>
+                                Adicionar ao Carrinho
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Clothing Page -->
+<section class="page clothing" id="clothing">
+<div class="container">
+<div class="section-title" data-aos="fade-up">
+<h2>Nossas Roupas</h2>
+</div>
+<div class="promo-banner" data-aos="fade-up">
+<h3>Nova Coleção Primavera/Verão</h3>
+<p>Descubra peças exclusivas com até 30% de desconto na compra do segundo item. Promoção por tempo limitado!</p>
+<a class="btn btn-secondary" href="#">Ver Coleção</a>
+</div>
+<div class="product-filters" data-aos="fade-up">
+<button class="filter-btn active" data-filter="all">Todos</button>
+<button class="filter-btn" data-filter="vestido">Vestidos</button>
+<button class="filter-btn" data-filter="blusa">Blusas</button>
+<button class="filter-btn" data-filter="calca">Calças</button>
+<button class="filter-btn" data-filter="acessorio">Acessórios</button>
+</div>
+<div class="product-grid">
+<!-- Vestido 1 -->
+<div class="product-card" data-aos="fade-up" data-category="vestido">
+<div class="product-image">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8f9fa" height="200" width="200"></rect>
+<path d="M100,30 L70,50 L70,170 L130,170 L130,50 Z" fill="#8A2BE2"></path>
+<path d="M100,30 L80,45 L80,165 L120,165 L120,45 Z" fill="#a35df0"></path>
+<path d="M80,60 L120,60" stroke="white" stroke-width="2"></path>
+<path d="M80,80 L120,80" stroke="white" stroke-dasharray="2,2" stroke-width="2"></path>
+<path d="M80,100 L120,100" stroke="white" stroke-dasharray="2,2" stroke-width="2"></path>
+<path d="M85,120 L115,120" stroke="white" stroke-width="2"></path>
+<path d="M90,140 L110,140" stroke="white" stroke-width="2"></path>
+</svg>
+<span class="product-tag">Destaque</span>
+</div>
+<div class="product-info">
+<h3 class="product-name">Vestido Midi Violeta</h3>
+<p class="product-category">Vestido</p>
+<p class="product-price">R$ 159,90</p>
+<button class="add-to-cart">
+<i class="fas fa-shopping-cart"></i>
+                                Adicionar ao Carrinho
+                            </button>
+</div>
+</div>
+<!-- Blusa 1 -->
+<div class="product-card" data-aos="fade-up" data-aos-delay="100" data-category="blusa">
+<div class="product-image">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8f9fa" height="200" width="200"></rect>
+<path d="M60,50 L140,50 L130,150 L70,150 Z" fill="#90EE90"></path>
+<path d="M65,55 L135,55 L127,145 L73,145 Z" fill="#70cc70"></path>
+<circle cx="100" cy="70" fill="white" r="10"></circle>
+<circle cx="100" cy="95" fill="white" r="10"></circle>
+<circle cx="100" cy="120" fill="white" r="10"></circle>
+</svg>
+</div>
+<div class="product-info">
+<h3 class="product-name">Blusa Verde Botões</h3>
+<p class="product-category">Blusa</p>
+<p class="product-price">R$ 89,90</p>
+<button class="add-to-cart">
+<i class="fas fa-shopping-cart"></i>
+                                Adicionar ao Carrinho
+                            </button>
+</div>
+</div>
+<!-- Calça 1 -->
+<div class="product-card" data-aos="fade-up" data-aos-delay="200" data-category="calca">
+<div class="product-image">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8f9fa" height="200" width="200"></rect>
+<path d="M80,40 L120,40 L130,170 L110,170 L100,100 L90,170 L70,170 Z" fill="#8A2BE2"></path>
+<path d="M85,45 L115,45 L123,165 L107,165 L100,100 L93,165 L77,165 Z" fill="#a35df0"></path>
+<path d="M85,60 L115,60" stroke="white" stroke-width="1"></path>
+<path d="M87,80 L113,80" stroke="white" stroke-dasharray="2,2" stroke-width="1"></path>
+</svg>
+<span class="product-tag">Novo</span>
+</div>
+<div class="product-info">
+<h3 class="product-name">Calça Flare Violeta</h3>
+<p class="product-category">Calça</p>
+<p class="product-price">R$ 129,90</p>
+<button class="add-to-cart">
+<i class="fas fa-shopping-cart"></i>
+                                Adicionar ao Carrinho
+                            </button>
+</div>
+</div>
+<!-- Acessório 1 -->
+<div class="product-card" data-aos="fade-up" data-aos-delay="300" data-category="acessorio">
+<div class="product-image">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8f9fa" height="200" width="200"></rect>
+<circle cx="100" cy="100" fill="#90EE90" r="50"></circle>
+<circle cx="100" cy="100" fill="#70cc70" r="45"></circle>
+<circle cx="100" cy="100" fill="white" r="35"></circle>
+<circle cx="100" cy="100" fill="#90EE90" r="30"></circle>
+<circle cx="100" cy="100" fill="white" r="20"></circle>
+<circle cx="100" cy="100" fill="#90EE90" r="15"></circle>
+<circle cx="100" cy="100" fill="white" r="5"></circle>
+</svg>
+</div>
+<div class="product-info">
+<h3 class="product-name">Colar Mandala Verde</h3>
+<p class="product-category">Acessório</p>
+<p class="product-price">R$ 49,90</p>
+<button class="add-to-cart">
+<i class="fas fa-shopping-cart"></i>
+                                Adicionar ao Carrinho
+                            </button>
+</div>
+</div>
+<!-- Vestido 2 -->
+<div class="product-card" data-aos="fade-up" data-aos-delay="100" data-category="vestido">
+<div class="product-image">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8f9fa" height="200" width="200"></rect>
+<path d="M100,30 L60,60 L70,170 L130,170 L140,60 Z" fill="#90EE90"></path>
+<path d="M100,35 L65,62 L75,165 L125,165 L135,62 Z" fill="#70cc70"></path>
+<path d="M75,80 L125,80" stroke="white" stroke-width="2"></path>
+<path d="M80,100 L120,100" stroke="white" stroke-dasharray="2,2" stroke-width="2"></path>
+<path d="M85,120 L115,120" stroke="white" stroke-width="2"></path>
+<path d="M90,140 L110,140" stroke="white" stroke-width="2"></path>
+</svg>
+<span class="product-tag">Promoção</span>
+</div>
+<div class="product-info">
+<h3 class="product-name">Vestido Longo Verde</h3>
+<p class="product-category">Vestido</p>
+<p class="product-price">R$ 179,90</p>
+<button class="add-to-cart">
+<i class="fas fa-shopping-cart"></i>
+                                Adicionar ao Carrinho
+                            </button>
+</div>
+</div>
+<!-- Blusa 2 -->
+<div class="product-card" data-aos="fade-up" data-aos-delay="200" data-category="blusa">
+<div class="product-image">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8f9fa" height="200" width="200"></rect>
+<path d="M60,50 L140,50 L130,150 L70,150 Z" fill="#8A2BE2"></path>
+<path d="M65,55 L135,55 L127,145 L73,145 Z" fill="#a35df0"></path>
+<path d="M65,70 L135,70" stroke="white" stroke-width="1"></path>
+<path d="M70,90 L130,90" stroke="white" stroke-dasharray="2,2" stroke-width="1"></path>
+<path d="M75,110 L125,110" stroke="white" stroke-width="1"></path>
+<path d="M80,130 L120,130" stroke="white" stroke-dasharray="2,2" stroke-width="1"></path>
+</svg>
+</div>
+<div class="product-info">
+<h3 class="product-name">Blusa Listrada Violeta</h3>
+<p class="product-category">Blusa</p>
+<p class="product-price">R$ 79,90</p>
+<button class="add-to-cart">
+<i class="fas fa-shopping-cart"></i>
+                                Adicionar ao Carrinho
+                            </button>
+</div>
+</div>
+<!-- Calça 2 -->
+<div class="product-card" data-aos="fade-up" data-aos-delay="300" data-category="calca">
+<div class="product-image">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8f9fa" height="200" width="200"></rect>
+<path d="M80,40 L120,40 L125,170 L105,170 L100,100 L95,170 L75,170 Z" fill="#90EE90"></path>
+<path d="M85,45 L115,45 L119,165 L103,165 L100,100 L97,165 L81,165 Z" fill="#70cc70"></path>
+<path d="M85,60 L115,60" stroke="white" stroke-width="1"></path>
+<path d="M87,80 L113,80" stroke="white" stroke-dasharray="2,2" stroke-width="1"></path>
+</svg>
+</div>
+<div class="product-info">
+<h3 class="product-name">Calça Skinny Verde</h3>
+<p class="product-category">Calça</p>
+<p class="product-price">R$ 119,90</p>
+<button class="add-to-cart">
+<i class="fas fa-shopping-cart"></i>
+                                Adicionar ao Carrinho
+                            </button>
+</div>
+</div>
+<!-- Acessório 2 -->
+<div class="product-card" data-aos="fade-up" data-aos-delay="400" data-category="acessorio">
+<div class="product-image">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8f9fa" height="200" width="200"></rect>
+<rect fill="#8A2BE2" height="60" rx="10" width="100" x="50" y="70"></rect>
+<rect fill="#a35df0" height="50" rx="8" width="90" x="55" y="75"></rect>
+<circle cx="100" cy="100" fill="gold" r="15"></circle>
+<circle cx="100" cy="100" fill="#8A2BE2" r="10"></circle>
+<rect fill="#8A2BE2" height="10" rx="5" width="10" x="45" y="95"></rect>
+<rect fill="#8A2BE2" height="10" rx="5" width="10" x="145" y="95"></rect>
+<path d="M45,100 L40,100 L40,130 L160,130 L160,100 L155,100" fill="none" stroke="#8A2BE2" stroke-width="2"></path>
+</svg>
+<span class="product-tag">Destaque</span>
+</div>
+<div class="product-info">
+<h3 class="product-name">Bolsa Elegante Violeta</h3>
+<p class="product-category">Acessório</p>
+<p class="product-price">R$ 139,90</p>
+<button class="add-to-cart">
+<i class="fas fa-shopping-cart"></i>
+                                Adicionar ao Carrinho
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container">
+<div class="footer-container">
+<div class="footer-column">
+<h3>Larabelle</h3>
+<p>Sua loja de moda e beleza feminina, com produtos exclusivos para realçar sua beleza natural.</p>
+<div class="social-links">
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+<a href="#"><i class="fab fa-pinterest-p"></i></a>
+</div>
+</div>
+<div class="footer-column">
+<h3>Links Rápidos</h3>
+<ul>
+<li><a data-page="home" href="#">Início</a></li>
+<li><a data-page="makeup" href="#">Maquiagens</a></li>
+<li><a data-page="clothing" href="#">Roupas</a></li>
+<li><a href="#">Contato</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>Categorias</h3>
+<ul>
+<li><a data-filter="batom" data-page="makeup" href="#">Batons</a></li>
+<li><a data-filter="base" data-page="makeup" href="#">Bases</a></li>
+<li><a data-filter="vestido" data-page="clothing" href="#">Vestidos</a></li>
+<li><a data-filter="blusa" data-page="clothing" href="#">Blusas</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>Contato</h3>
+<ul>
+<li><i class="fas fa-map-marker-alt"></i> Rua das Flores, 123</li>
+<li><i class="fas fa-phone"></i> (11) 99999-9999</li>
+<li><i class="fas fa-envelope"></i> contato@larabelle.com</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p>© 2023 Larabelle. Todos os direitos reservados.</p>
+</div>
+</div>
+</footer>
+
+<script src="../javascript/java.js"></script></body>
+</html>
