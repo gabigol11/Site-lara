@@ -1,9 +1,6 @@
 name: Ajustar icones Larabelle
 
-on:
-  push:
-    paths:
-      - '.github/workflows/ajustar-icones.yml'
+on: push
 
 permissions:
   contents: write
@@ -22,23 +19,19 @@ jobs:
           p = Path('index.html')
           s = p.read_text(encoding='utf-8')
 
-          # Estilo dos icones sociais
           css = '''\n    .social-icons { display: flex; align-items: center; gap: .65rem; }\n    .social-icon { width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; background: rgba(255,255,255,.12); color: #fff; transition: transform .2s ease, background .2s ease; }\n    .social-icon:hover { transform: translateY(-3px); background: rgba(245,217,215,.28); }\n    .social-icon img { width: 19px; height: 19px; display: block; }\n    .whatsapp-icon { width: 18px; height: 18px; display: inline-block; flex: 0 0 auto; }\n'''
           marker = '    .focus-ring:focus-visible { outline: 3px solid #bd7775; outline-offset: 3px; }'
           if '.social-icons {' not in s:
               s = s.replace(marker, css + marker)
 
-          # Icone WhatsApp nos botoes que ja levam ao WhatsApp.
           wa_icon = '<img class="whatsapp-icon" src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="" aria-hidden="true">'
-          replacements = [
+          for old, new in [
               ('>Pedir pelo WhatsApp</a>', f'>{wa_icon}Pedir pelo WhatsApp</a>'),
               ('>Falar pelo WhatsApp</a>', f'>{wa_icon}Falar pelo WhatsApp</a>'),
               ('>Consultar entrega</a>', f'>{wa_icon}Consultar entrega</a>'),
-          ]
-          for old, new in replacements:
+          ]:
               s = s.replace(old, new)
 
-          # Rodape com icones oficiais das redes.
           old_footer = '<div class="flex gap-4">\n      <a class="focus-ring" href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i data-lucide="instagram" class="h-5 w-5" aria-hidden="true"></i></a><a class="focus-ring" href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i data-lucide="facebook" class="h-5 w-5" aria-hidden="true"></i></a><a class="focus-ring" href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i data-lucide="music-2" class="h-5 w-5" aria-hidden="true"></i></a>\n     </div>'
           new_footer = '''<div class="social-icons" aria-label="Redes sociais da Larabelle">
       <a class="social-icon focus-ring" href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="https://cdn.simpleicons.org/instagram/ffffff" alt="" aria-hidden="true"></a>
@@ -49,9 +42,7 @@ jobs:
           if old_footer in s:
               s = s.replace(old_footer, new_footer)
 
-          # Botao flutuante do WhatsApp com o icone da marca.
           s = s.replace('<i data-lucide="message-circle" class="h-7 w-7" aria-hidden="true"></i></a>', '<img class="h-7 w-7" src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="" aria-hidden="true"></a>')
-
           p.write_text(s, encoding='utf-8')
           PY
 
