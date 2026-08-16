@@ -2,8 +2,9 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Promoções - Larabelle</title>
-  <link rel="stylesheet" href="/css/css.css">
+  <link rel="stylesheet" href="css.css">
 </head>
 <body>
   <header>
@@ -12,20 +13,36 @@
       <nav>
         <a href="index.html">Início</a>
         <a href="produtos.html">Produtos</a>
-        <a href="promocoes.html">Promoções</a>
+        <a class="active" href="promocoes.html">Promoções</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="container">
-      <h2>Promoções</h2>
+      <div class="page-title">
+        <span>OFERTAS ESPECIAIS</span>
+        <h2>Promoções</h2>
+        <p>Aproveite nossas ofertas por tempo limitado.</p>
+      </div>
+
       <div class="product-grid">
-        <div class="product-card"><img src="../images/sombra1.jpg"><p>Paleta Galáxia - R$ 89,90</p></div>
-        <div class="product-card"><img src="../images/blusa1.jpg"><p>Blusa Listrada - R$ 79,90</p></div>
-        <div class="product-card"><img src="../images/vestido1.jpg"><p>Vestido Verde - R$ 179,90</p></div>
+        <article class="product-card">
+          <div class="product-image"><img src="images/sombra1.jpg" alt="Paleta Galáxia"></div>
+          <div class="product-info"><h3>Paleta Galáxia</h3><p>Cores marcantes para criar looks incríveis.</p><strong>R$ 89,90</strong></div>
+        </article>
+        <article class="product-card">
+          <div class="product-image"><img src="images/blusa1.jpg" alt="Blusa Listrada"></div>
+          <div class="product-info"><h3>Blusa Listrada</h3><p>Leve, versátil e perfeita para o dia a dia.</p><strong>R$ 79,90</strong></div>
+        </article>
+        <article class="product-card">
+          <div class="product-image"><img src="images/vestido1.jpg" alt="Vestido Verde"></div>
+          <div class="product-info"><h3>Vestido Verde</h3><p>Um visual sofisticado para qualquer ocasião.</p><strong>R$ 179,90</strong></div>
+        </article>
       </div>
     </section>
   </main>
+
+  <footer><p>&copy; 2025 Larabelle. Todos os direitos reservados.</p></footer>
 </body>
 </html>
