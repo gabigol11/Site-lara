@@ -1,44 +1,432 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="pt-BR">
-<head>
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260814-05-a1b2e7b","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/7949ff62d67710d5.telemetry_sdk.js" integrity="sha512-KIvXA82Di44YY/RH9/63A9MuTuavYgDFG8PfErJn7Wli4K0LAOk+coo/aPXk3+ZNL96nHh9VYD4PE+fLes+laQ=="></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Larabelle - Moda Feminina</title>
-  <link rel="stylesheet" href="css.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
-</head>
-<body>
-  <!-- Cabeçalho -->
-  <header>
-    <div class="header-container">
-      <h1>Larabelle</h1>
-      <nav>
-        <a href="index.html">Inícios</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="promocoes.html">Promoções</a>
-      </nav>
+  <title>Larabelle — Doces artesanais</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --chocolate: #4a2b25;
+      --deep: #2f1917;
+      --cream: #fffaf4;
+      --blush: #f5d9d7;
+      --sage: #cdd9c5;
+      --rose: #bd7775;
+      --ink: #563a35;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: "DM Sans", sans-serif; color: var(--ink); overflow-x: hidden; }
+    h1, h2, h3, .brand-font { font-family: "Fraunces", serif; }
+    .page-shell { width: 100%; background: var(--cream); }
+    .nav-link { position: relative; transition: color .2s ease; }
+    .nav-link::after { content: ""; position: absolute; height: 1px; width: 0; left: 0; bottom: -5px; background: var(--rose); transition: width .25s ease; }
+    .nav-link:hover::after { width: 100%; }
+    .nav-link:hover { color: var(--rose); }
+    .butterfly { width: 32px; height: 25px; color: var(--rose); }
+    .butterfly path { fill: currentColor; }
+    .hero-orb { position: absolute; border-radius: 999px; filter: blur(1px); opacity: .7; pointer-events: none; }
+    .hero-orb.one { width: 230px; height: 230px; background: var(--blush); top: -70px; right: 42%; }
+    .hero-orb.two { width: 160px; height: 160px; background: var(--sage); bottom: -50px; left: 35%; }
+    .eyebrow { letter-spacing: .18em; text-transform: uppercase; font-size: .72rem; font-weight: 700; }
+    .soft-shadow { box-shadow: 0 18px 50px rgba(74,43,37,.12); }
+    .product-card { transition: transform .3s ease, box-shadow .3s ease; }
+    .product-card:hover { transform: translateY(-7px); box-shadow: 0 20px 45px rgba(74,43,37,.16); }
+    .product-card img { transition: transform .6s ease; }
+    .product-card:hover img { transform: scale(1.06); }
+    .gallery-item { overflow: hidden; }
+    .gallery-item img { transition: transform .5s ease; }
+    .gallery-item:hover img { transform: scale(1.08); }
+    .section-rule { display: flex; align-items: center; justify-content: center; gap: .8rem; color: var(--rose); }
+    .section-rule::before, .section-rule::after { content: ""; height: 1px; width: 42px; background: currentColor; opacity: .55; }
+    .map-pattern {
+      background-color: #e8eee3;
+      background-image: linear-gradient(30deg, rgba(74,43,37,.08) 12%, transparent 12.5%, transparent 87%, rgba(74,43,37,.08) 87.5%, rgba(74,43,37,.08)),
+                        linear-gradient(150deg, rgba(74,43,37,.08) 12%, transparent 12.5%, transparent 87%, rgba(74,43,37,.08) 87.5%, rgba(74,43,37,.08));
+      background-size: 38px 66px;
+    }
+    .reveal { animation: rise .7s ease both; }
+    .delay-1 { animation-delay: .1s; } .delay-2 { animation-delay: .2s; } .delay-3 { animation-delay: .3s; }
+    @keyframes rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .focus-ring:focus-visible { outline: 3px solid #bd7775; outline-offset: 3px; }
+    @media (max-width: 900px) {
+      .desktop-menu { display: none; }
+      .mobile-toggle { display: inline-flex; }
+      #mobile-menu.is-open { display: block; }
+    }
+    @media (min-width: 901px) { .mobile-toggle, #mobile-menu { display: none; } }
+  </style>
+  <script src="/_sdk/0e8d3a91e1c6f495.data_sdk.js" type="text/javascript" integrity="sha512-c00oDoGjsMgluCLLEyVl3suwEkgjOGGplVFbsilUoBg4aMKNmsL3mwsc9r0dPn95qiSZyjBousQXgROkAW7p/w=="></script>
+  <script src="/_sdk/eba18683f23e5798.resizing_sdk.js" type="text/javascript" integrity="sha512-E0UWUllhwPXaNJtjyTKXWKrIE+FruPfFpO4mRmMDP2LI+U9bOizy5npCq6xx/JyWcvSK7D3TFf2wFR2Mha9kbA=="></script>
+ </head>
+ <body data-template-id="__page-root">
+  <div class="page-shell">
+   <header class="sticky top-0 z-50 border-b border-[#4a2b2515] bg-[#fffaf4ee] backdrop-blur-md">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Navegação principal"><a href="#inicio" class="focus-ring flex items-center gap-2 rounded-md" aria-label="Larabelle, ir para início">
+      <svg class="butterfly" viewbox="0 0 64 48" aria-hidden="true">
+       <path d="M32 24C23 5 7 3 4 13c-4 14 13 19 28 14-12 7-12 18-4 20 10 3 12-12 4-23ZM32 24C41 5 57 3 60 13c4 14-13 19-28 14 12 7 12 18 4 20-10 3-12-12-4-23Z" />
+      </svg><span data-template-id="brand-name" class="canva-text brand-font text-3xl leading-none"></span> </a>
+     <div class="desktop-menu flex items-center gap-6 text-sm font-medium"><a data-template-id="nav-home" class="canva-link nav-link focus-ring rounded-sm" href="#inicio"></a> <a data-template-id="nav-about" class="canva-link nav-link focus-ring rounded-sm" href="#sobre"></a> <a data-template-id="nav-products" class="canva-link nav-link focus-ring rounded-sm" href="#produtos"></a> <a data-template-id="nav-orders" class="canva-link nav-link focus-ring rounded-sm" href="#encomendas"></a> <a data-template-id="nav-reviews" class="canva-link nav-link focus-ring rounded-sm" href="#avaliacoes"></a> <a data-template-id="nav-location" class="canva-link nav-link focus-ring rounded-sm" href="#localizacao"></a> <a data-template-id="nav-contact" class="canva-link nav-link focus-ring rounded-sm" href="#contato"></a>
+     </div><a data-template-id="header-whatsapp" class="canva-button focus-ring hidden items-center gap-2 rounded-full px-4 py-3 text-sm font-bold shadow-sm transition hover:-translate-y-0.5 md:inline-flex" href="https://wa.me/?text=Olá%20Larabelle!%20Gostaria%20de%20fazer%20uma%20encomenda." target="_blank" rel="noopener noreferrer"> <i data-lucide="message-circle" class="h-4 w-4" aria-hidden="true"></i> </a> <button id="menu-toggle" type="button" class="mobile-toggle focus-ring rounded-full border border-[#4a2b2530] p-2 text-[#4a2b25]" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu"> <i data-lucide="menu" class="h-5 w-5" aria-hidden="true"></i> </button>
+    </nav>
+    <div id="mobile-menu" class="hidden border-t border-[#4a2b2512] bg-[#fffaf4] px-5 py-5">
+     <div class="flex flex-col gap-4 text-sm font-semibold"><a data-template-id="mobile-nav-home" class="canva-link focus-ring rounded-sm" href="#inicio"></a> <a data-template-id="mobile-nav-products" class="canva-link focus-ring rounded-sm" href="#produtos"></a> <a data-template-id="mobile-nav-orders" class="canva-link focus-ring rounded-sm" href="#encomendas"></a> <a data-template-id="mobile-nav-contact" class="canva-link focus-ring rounded-sm" href="#contato"></a>
+     </div>
     </div>
-  </header>
-
-  <!-- Conteúdo principal -->
-  <main>
-    <!-- Seção Hero -->
-    <section class="hero" data-aos="fade-up">
-      <h2>Estilo e beleza todos os dias</h2>
-      <p>Encontre os melhores produtos de moda e maquiagem</p>
-      <a class="btn" href="produtos.html">Ver Produtos</a>
+   </header>
+   <main>
+    <section id="inicio" class="relative overflow-hidden px-5 py-14 lg:px-8 lg:py-24">
+     <div class="hero-orb one"></div>
+     <div class="hero-orb two"></div>
+     <div class="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.04fr_.96fr]">
+      <div class="max-w-2xl">
+       <div class="reveal flex items-center gap-2">
+        <svg class="butterfly h-5 w-6" viewbox="0 0 64 48" aria-hidden="true">
+         <path d="M32 24C23 5 7 3 4 13c-4 14 13 19 28 14-12 7-12 18-4 20 10 3 12-12 4-23ZM32 24C41 5 57 3 60 13c4 14-13 19-28 14 12 7 12 18 4 20-10 3-12-12-4-23Z" />
+        </svg><span data-template-id="hero-eyebrow" class="canva-text eyebrow"></span>
+       </div>
+       <h1 data-template-id="hero-title" class="canva-text reveal delay-1 mt-5 max-w-xl leading-[1.08]"></h1>
+       <p data-template-id="hero-description" class="canva-text reveal delay-2 mt-6 max-w-lg text-lg leading-relaxed"></p>
+       <div class="reveal delay-3 mt-8 flex flex-col gap-3 sm:flex-row"><a data-template-id="hero-products-button" class="canva-button focus-ring inline-flex items-center justify-center gap-2 rounded-full px-6 py-4 font-bold shadow-sm transition hover:-translate-y-0.5" href="#produtos"> <i data-lucide="cake-slice" class="h-5 w-5" aria-hidden="true"></i> </a> <a data-template-id="hero-whatsapp-button" class="canva-button focus-ring inline-flex items-center justify-center gap-2 rounded-full border border-[#4a2b2533] px-6 py-4 font-bold transition hover:bg-[#f5d9d7]" href="https://wa.me/?text=Olá%20Larabelle!%20Quero%20saber%20mais%20sobre%20as%20encomendas." target="_blank" rel="noopener noreferrer"> <i data-lucide="message-circle" class="h-5 w-5" aria-hidden="true"></i> </a>
+       </div>
+      </div>
+      <div class="reveal delay-2 relative mx-auto w-full max-w-xl">
+       <div class="absolute -left-5 top-10 h-32 w-32 rounded-full bg-[#cdd9c5] opacity-70"></div>
+       <div class="absolute -bottom-5 -right-5 h-36 w-36 rounded-full bg-[#f5d9d7]"></div>
+       <div class="relative overflow-hidden rounded-[2.5rem] border-[9px] border-white soft-shadow"><img data-template-id="hero-image" class="canva-image h-[440px] w-full object-cover sm:h-[540px]" loading="lazy">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#2f1917bb] to-transparent p-7 pt-20">
+         <p data-template-id="hero-image-caption" class="canva-text text-sm font-semibold"></p>
+        </div>
+       </div>
+       <svg class="butterfly absolute -right-2 top-5 h-10 w-12 text-[#bd7775]" viewbox="0 0 64 48" aria-hidden="true">
+        <path d="M32 24C23 5 7 3 4 13c-4 14 13 19 28 14-12 7-12 18-4 20 10 3 12-12 4-23ZM32 24C41 5 57 3 60 13c4 14-13 19-28 14 12 7 12 18 4 20-10 3-12-12-4-23Z" />
+       </svg>
+      </div>
+     </div>
     </section>
-  </main>
-
-  <!-- Rodapé -->
-  <footer data-aos="fade-in">
-    <p>&copy; 2025 Larabelle. Todos os direitos reservados.</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="java.js"></script>
-</body>
+    <section id="sobre" class="bg-white px-5 py-20 lg:px-8">
+     <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+      <div class="relative order-2 lg:order-1">
+       <div class="overflow-hidden rounded-[2rem] soft-shadow"><img data-template-id="about-image" class="canva-image h-[380px] w-full object-cover sm:h-[480px]" loading="lazy">
+       </div>
+       <div class="absolute -bottom-6 -right-3 hidden rounded-2xl border border-white bg-[#cdd9c5] px-6 py-5 shadow-lg sm:block">
+        <svg class="butterfly h-9 w-11" viewbox="0 0 64 48" aria-hidden="true">
+         <path d="M32 24C23 5 7 3 4 13c-4 14 13 19 28 14-12 7-12 18-4 20 10 3 12-12 4-23ZM32 24C41 5 57 3 60 13c4 14-13 19-28 14 12 7 12 18 4 20-10 3-12-12-4-23Z" />
+        </svg>
+       </div>
+      </div>
+      <div class="order-1 lg:order-2">
+       <p data-template-id="about-eyebrow" class="canva-text eyebrow"></p>
+       <h2 data-template-id="about-title" class="canva-text mt-4 leading-tight"></h2>
+       <p data-template-id="about-description" class="canva-text mt-6 max-w-xl leading-relaxed"></p>
+       <div class="mt-9 grid gap-4 sm:grid-cols-3">
+        <article data-template-id="feature-care-card" class="canva-card rounded-2xl p-4"><span class="text-2xl" aria-hidden="true">❤️</span>
+         <h3 data-template-id="feature-care-title" class="canva-text mt-3 text-base font-bold"></h3>
+        </article>
+        <article data-template-id="feature-ingredients-card" class="canva-card rounded-2xl p-4"><span class="text-2xl" aria-hidden="true">🍫</span>
+         <h3 data-template-id="feature-ingredients-title" class="canva-text mt-3 text-base font-bold"></h3>
+        </article>
+        <article data-template-id="feature-custom-card" class="canva-card rounded-2xl p-4"><span class="text-2xl" aria-hidden="true">✨</span>
+         <h3 data-template-id="feature-custom-title" class="canva-text mt-3 text-base font-bold"></h3>
+        </article>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="produtos" class="px-5 py-20 lg:px-8">
+     <div class="mx-auto max-w-7xl">
+      <div class="mx-auto max-w-2xl text-center">
+       <p data-template-id="products-eyebrow" class="canva-text eyebrow"></p>
+       <h2 data-template-id="products-title" class="canva-text mt-4 leading-tight"></h2>
+       <p data-template-id="products-description" class="canva-text mt-5 leading-relaxed"></p>
+       <div class="section-rule mt-7">
+        <svg class="butterfly h-5 w-6" viewbox="0 0 64 48" aria-hidden="true">
+         <path d="M32 24C23 5 7 3 4 13c-4 14 13 19 28 14-12 7-12 18-4 20 10 3 12-12 4-23ZM32 24C41 5 57 3 60 13c4 14-13 19-28 14 12 7 12 18 4 20-10 3-12-12-4-23Z" />
+        </svg>
+       </div>
+      </div>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+       <article data-template-id="product-cone-card" class="canva-card product-card overflow-hidden rounded-3xl bg-white">
+        <div class="h-52 overflow-hidden">
+         <img data-template-id="product-cone-image" class="canva-image h-full w-full object-cover" loading="lazy">
+        </div>
+        <div class="p-5">
+         <h3 data-template-id="product-cone-title" class="canva-text text-xl"></h3>
+         <p data-template-id="product-cone-description" class="canva-text mt-2 text-sm leading-relaxed"></p><a data-template-id="product-cone-button" class="canva-button focus-ring mt-5 inline-flex rounded-full px-4 py-2 text-sm font-bold" href="https://wa.me/?text=Olá%20Larabelle!%20Tenho%20interesse%20em%20Cone%20Trufado." target="_blank" rel="noopener noreferrer"></a>
+        </div>
+       </article>
+       <article data-template-id="product-jar-card" class="canva-card product-card overflow-hidden rounded-3xl bg-white">
+        <div class="h-52 overflow-hidden">
+         <img data-template-id="product-jar-image" class="canva-image h-full w-full object-cover" loading="lazy">
+        </div>
+        <div class="p-5">
+         <h3 data-template-id="product-jar-title" class="canva-text text-xl"></h3>
+         <p data-template-id="product-jar-description" class="canva-text mt-2 text-sm leading-relaxed"></p><a data-template-id="product-jar-button" class="canva-button focus-ring mt-5 inline-flex rounded-full px-4 py-2 text-sm font-bold" href="https://wa.me/?text=Olá%20Larabelle!%20Tenho%20interesse%20em%20Bolo%20no%20Pote." target="_blank" rel="noopener noreferrer"></a>
+        </div>
+       </article>
+       <article data-template-id="product-truffles-card" class="canva-card product-card overflow-hidden rounded-3xl bg-white">
+        <div class="h-52 overflow-hidden">
+         <img data-template-id="product-truffles-image" class="canva-image h-full w-full object-cover" loading="lazy">
+        </div>
+        <div class="p-5">
+         <h3 data-template-id="product-truffles-title" class="canva-text text-xl"></h3>
+         <p data-template-id="product-truffles-description" class="canva-text mt-2 text-sm leading-relaxed"></p><a data-template-id="product-truffles-button" class="canva-button focus-ring mt-5 inline-flex rounded-full px-4 py-2 text-sm font-bold" href="https://wa.me/?text=Olá%20Larabelle!%20Tenho%20interesse%20em%20Trufas." target="_blank" rel="noopener noreferrer"></a>
+        </div>
+       </article>
+       <article data-template-id="product-custom-card" class="canva-card product-card overflow-hidden rounded-3xl bg-white">
+        <div class="h-52 overflow-hidden">
+         <img data-template-id="product-custom-image" class="canva-image h-full w-full object-cover" loading="lazy">
+        </div>
+        <div class="p-5">
+         <h3 data-template-id="product-custom-title" class="canva-text text-xl"></h3>
+         <p data-template-id="product-custom-description" class="canva-text mt-2 text-sm leading-relaxed"></p><a data-template-id="product-custom-button" class="canva-button focus-ring mt-5 inline-flex rounded-full px-4 py-2 text-sm font-bold" href="https://wa.me/?text=Olá%20Larabelle!%20Gostaria%20de%20encomendar%20doces%20personalizados." target="_blank" rel="noopener noreferrer"></a>
+        </div>
+       </article>
+       <article data-template-id="product-birthday-card" class="canva-card product-card overflow-hidden rounded-3xl bg-white">
+        <div class="h-52 overflow-hidden">
+         <img data-template-id="product-birthday-image" class="canva-image h-full w-full object-cover" loading="lazy">
+        </div>
+        <div class="p-5">
+         <h3 data-template-id="product-birthday-title" class="canva-text text-xl"></h3>
+         <p data-template-id="product-birthday-description" class="canva-text mt-2 text-sm leading-relaxed"></p><a data-template-id="product-birthday-button" class="canva-button focus-ring mt-5 inline-flex rounded-full px-4 py-2 text-sm font-bold" href="https://wa.me/?text=Olá%20Larabelle!%20Gostaria%20de%20encomendar%20um%20bolo%20de%20aniversário." target="_blank" rel="noopener noreferrer"></a>
+        </div>
+       </article>
+       <article data-template-id="product-brigadeiros-card" class="canva-card product-card overflow-hidden rounded-3xl bg-white">
+        <div class="h-52 overflow-hidden">
+         <img data-template-id="product-brigadeiros-image" class="canva-image h-full w-full object-cover" loading="lazy">
+        </div>
+        <div class="p-5">
+         <h3 data-template-id="product-brigadeiros-title" class="canva-text text-xl"></h3>
+         <p data-template-id="product-brigadeiros-description" class="canva-text mt-2 text-sm leading-relaxed"></p><a data-template-id="product-brigadeiros-button" class="canva-button focus-ring mt-5 inline-flex rounded-full px-4 py-2 text-sm font-bold" href="https://wa.me/?text=Olá%20Larabelle!%20Tenho%20interesse%20em%20Brigadeiros." target="_blank" rel="noopener noreferrer"></a>
+        </div>
+       </article>
+       <article data-template-id="product-tarts-card" class="canva-card product-card overflow-hidden rounded-3xl bg-white">
+        <div class="h-52 overflow-hidden">
+         <img data-template-id="product-tarts-image" class="canva-image h-full w-full object-cover" loading="lazy">
+        </div>
+        <div class="p-5">
+         <h3 data-template-id="product-tarts-title" class="canva-text text-xl"></h3>
+         <p data-template-id="product-tarts-description" class="canva-text mt-2 text-sm leading-relaxed"></p><a data-template-id="product-tarts-button" class="canva-button focus-ring mt-5 inline-flex rounded-full px-4 py-2 text-sm font-bold" href="https://wa.me/?text=Olá%20Larabelle!%20Tenho%20interesse%20em%20Tortas." target="_blank" rel="noopener noreferrer"></a>
+        </div>
+       </article>
+      </div>
+     </div>
+    </section>
+    <section id="encomendas" class="px-5 py-10 lg:px-8">
+     <div data-template-id="order-highlight-section" class="canva-section relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] px-7 py-14 text-center sm:px-14">
+      <svg class="butterfly absolute left-8 top-8 h-10 w-12 text-[#f5d9d7]" viewbox="0 0 64 48" aria-hidden="true">
+       <path d="M32 24C23 5 7 3 4 13c-4 14 13 19 28 14-12 7-12 18-4 20 10 3 12-12 4-23ZM32 24C41 5 57 3 60 13c4 14-13 19-28 14 12 7 12 18 4 20-10 3-12-12-4-23Z" />
+      </svg>
+      <svg class="butterfly absolute bottom-8 right-10 h-12 w-14 text-[#cdd9c5]" viewbox="0 0 64 48" aria-hidden="true">
+       <path d="M32 24C23 5 7 3 4 13c-4 14 13 19 28 14-12 7-12 18-4 20 10 3 12-12 4-23ZM32 24C41 5 57 3 60 13c4 14-13 19-28 14 12 7 12 18 4 20-10 3-12-12-4-23Z" />
+      </svg>
+      <div class="relative mx-auto max-w-2xl">
+       <h2 data-template-id="order-highlight-title" class="canva-text leading-tight"></h2>
+       <p data-template-id="order-highlight-description" class="canva-text mx-auto mt-5 max-w-xl leading-relaxed"></p><a data-template-id="order-highlight-button" class="canva-button focus-ring mt-8 inline-flex items-center gap-2 rounded-full px-6 py-4 font-bold transition hover:-translate-y-0.5" href="https://wa.me/?text=Olá%20Larabelle!%20Quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle" class="h-5 w-5" aria-hidden="true"></i></a>
+      </div>
+     </div>
+    </section>
+    <section class="bg-white px-5 py-20 lg:px-8">
+     <div class="mx-auto max-w-7xl">
+      <div class="mx-auto max-w-2xl text-center">
+       <p data-template-id="process-eyebrow" class="canva-text eyebrow"></p>
+       <h2 data-template-id="process-title" class="canva-text mt-4 leading-tight"></h2>
+      </div>
+      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+       <article class="relative text-center">
+        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#f5d9d7] text-[#4a2b25]">
+         <i data-lucide="cake-slice" class="h-6 w-6" aria-hidden="true"></i>
+        </div>
+        <p data-template-id="step-one-number" class="canva-text mt-5 text-xs font-bold"></p>
+        <h3 data-template-id="step-one-title" class="canva-text mt-2 text-xl"></h3>
+        <p data-template-id="step-one-description" class="canva-text mt-2 text-sm leading-relaxed"></p>
+       </article>
+       <article class="relative text-center">
+        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#cdd9c5] text-[#4a2b25]">
+         <i data-lucide="message-circle" class="h-6 w-6" aria-hidden="true"></i>
+        </div>
+        <p data-template-id="step-two-number" class="canva-text mt-5 text-xs font-bold"></p>
+        <h3 data-template-id="step-two-title" class="canva-text mt-2 text-xl"></h3>
+        <p data-template-id="step-two-description" class="canva-text mt-2 text-sm leading-relaxed"></p>
+       </article>
+       <article class="relative text-center">
+        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#f5d9d7] text-[#4a2b25]">
+         <i data-lucide="clipboard-check" class="h-6 w-6" aria-hidden="true"></i>
+        </div>
+        <p data-template-id="step-three-number" class="canva-text mt-5 text-xs font-bold"></p>
+        <h3 data-template-id="step-three-title" class="canva-text mt-2 text-xl"></h3>
+        <p data-template-id="step-three-description" class="canva-text mt-2 text-sm leading-relaxed"></p>
+       </article>
+       <article class="relative text-center">
+        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#cdd9c5] text-[#4a2b25]">
+         <i data-lucide="bike" class="h-6 w-6" aria-hidden="true"></i>
+        </div>
+        <p data-template-id="step-four-number" class="canva-text mt-5 text-xs font-bold"></p>
+        <h3 data-template-id="step-four-title" class="canva-text mt-2 text-xl"></h3>
+        <p data-template-id="step-four-description" class="canva-text mt-2 text-sm leading-relaxed"></p>
+       </article>
+      </div>
+     </div>
+    </section>
+    <section class="px-5 py-20 lg:px-8">
+     <div class="mx-auto grid max-w-7xl items-center gap-8 rounded-[2rem] bg-[#cdd9c5] p-8 md:grid-cols-[1fr_auto] md:p-12">
+      <div>
+       <p data-template-id="delivery-eyebrow" class="canva-text eyebrow"></p>
+       <h2 data-template-id="delivery-title" class="canva-text mt-4 leading-tight"></h2>
+       <p data-template-id="delivery-description" class="canva-text mt-4 max-w-2xl leading-relaxed"></p>
+      </div><a data-template-id="delivery-button" class="canva-button focus-ring inline-flex items-center justify-center gap-2 rounded-full px-6 py-4 font-bold shadow-sm transition hover:-translate-y-0.5" href="https://wa.me/?text=Olá%20Larabelle!%20Gostaria%20de%20consultar%20a%20entrega." target="_blank" rel="noopener noreferrer"><i data-lucide="truck" class="h-5 w-5" aria-hidden="true"></i></a>
+     </div>
+    </section>
+    <section id="avaliacoes" class="bg-white px-5 py-20 lg:px-8">
+     <div class="mx-auto max-w-7xl">
+      <div class="mx-auto max-w-2xl text-center">
+       <p data-template-id="reviews-eyebrow" class="canva-text eyebrow"></p>
+       <h2 data-template-id="reviews-title" class="canva-text mt-4 leading-tight"></h2>
+       <p data-template-id="reviews-note" class="canva-text mt-4 text-sm italic"></p>
+      </div>
+      <div class="mt-10 grid gap-6 lg:grid-cols-3">
+       <figure data-template-id="review-one-card" class="canva-card rounded-3xl p-7">
+        <div data-template-id="review-one-stars" class="canva-text tracking-widest"></div>
+        <blockquote data-template-id="review-one-text" class="canva-text mt-5 text-lg leading-relaxed"></blockquote>
+        <figcaption data-template-id="review-one-author" class="canva-text mt-5 text-sm font-bold"></figcaption>
+       </figure>
+       <figure data-template-id="review-two-card" class="canva-card rounded-3xl p-7">
+        <div data-template-id="review-two-stars" class="canva-text tracking-widest"></div>
+        <blockquote data-template-id="review-two-text" class="canva-text mt-5 text-lg leading-relaxed"></blockquote>
+        <figcaption data-template-id="review-two-author" class="canva-text mt-5 text-sm font-bold"></figcaption>
+       </figure>
+       <figure data-template-id="review-three-card" class="canva-card rounded-3xl p-7">
+        <div data-template-id="review-three-stars" class="canva-text tracking-widest"></div>
+        <blockquote data-template-id="review-three-text" class="canva-text mt-5 text-lg leading-relaxed"></blockquote>
+        <figcaption data-template-id="review-three-author" class="canva-text mt-5 text-sm font-bold"></figcaption>
+       </figure>
+      </div>
+      <div class="mt-9 text-center">
+       <a data-template-id="reviews-google-button" class="canva-button focus-ring inline-flex items-center gap-2 rounded-full border border-[#4a2b2530] px-6 py-3 font-bold transition hover:bg-[#f5d9d7]" href="https://www.google.com/search?q=Larabelle+Confeitaria" target="_blank" rel="noopener noreferrer"><i data-lucide="star" class="h-4 w-4" aria-hidden="true"></i></a>
+      </div>
+     </div>
+    </section>
+    <section class="px-5 py-20 lg:px-8">
+     <div class="mx-auto max-w-7xl">
+      <div class="mx-auto max-w-2xl text-center">
+       <p data-template-id="gallery-eyebrow" class="canva-text eyebrow"></p>
+       <h2 data-template-id="gallery-title" class="canva-text mt-4 leading-tight"></h2>
+      </div>
+      <div class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+       <div class="gallery-item col-span-2 row-span-2 overflow-hidden rounded-3xl">
+        <img data-template-id="gallery-image-one" class="canva-image h-full min-h-64 w-full object-cover" loading="lazy">
+       </div>
+       <div class="gallery-item overflow-hidden rounded-3xl">
+        <img data-template-id="gallery-image-two" class="canva-image h-48 w-full object-cover" loading="lazy">
+       </div>
+       <div class="gallery-item overflow-hidden rounded-3xl">
+        <img data-template-id="gallery-image-three" class="canva-image h-48 w-full object-cover" loading="lazy">
+       </div>
+       <div class="gallery-item overflow-hidden rounded-3xl">
+        <img data-template-id="gallery-image-four" class="canva-image h-48 w-full object-cover" loading="lazy">
+       </div>
+       <div class="gallery-item col-span-2 overflow-hidden rounded-3xl">
+        <img data-template-id="gallery-image-five" class="canva-image h-48 w-full object-cover" loading="lazy">
+       </div>
+       <div class="gallery-item overflow-hidden rounded-3xl">
+        <img data-template-id="gallery-image-six" class="canva-image h-48 w-full object-cover" loading="lazy">
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="bg-white px-5 py-20 lg:px-8">
+     <div class="mx-auto max-w-3xl text-center">
+      <svg class="butterfly mx-auto h-9 w-11" viewbox="0 0 64 48" aria-hidden="true">
+       <path d="M32 24C23 5 7 3 4 13c-4 14 13 19 28 14-12 7-12 18-4 20 10 3 12-12 4-23ZM32 24C41 5 57 3 60 13c4 14-13 19-28 14 12 7 12 18 4 20-10 3-12-12-4-23Z" />
+      </svg>
+      <h2 data-template-id="social-title" class="canva-text mt-5 leading-tight"></h2>
+      <p data-template-id="social-description" class="canva-text mx-auto mt-4 max-w-xl leading-relaxed"></p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3"><a data-template-id="instagram-link" class="canva-button focus-ring inline-flex items-center gap-2 rounded-full px-5 py-3 font-bold" href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram" class="h-5 w-5" aria-hidden="true"></i></a> <a data-template-id="facebook-link" class="canva-button focus-ring inline-flex items-center gap-2 rounded-full px-5 py-3 font-bold" href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i data-lucide="facebook" class="h-5 w-5" aria-hidden="true"></i></a> <a data-template-id="tiktok-link" class="canva-button focus-ring inline-flex items-center gap-2 rounded-full px-5 py-3 font-bold" href="https://tiktok.com" target="_blank" rel="noopener noreferrer"><i data-lucide="music-2" class="h-5 w-5" aria-hidden="true"></i></a>
+      </div>
+     </div>
+    </section>
+    <section id="localizacao" class="px-5 py-20 lg:px-8">
+     <div class="mx-auto grid max-w-7xl overflow-hidden rounded-[2rem] bg-[#f5d9d7] md:grid-cols-2">
+      <div class="p-8 md:p-12">
+       <p data-template-id="location-eyebrow" class="canva-text eyebrow"></p>
+       <h2 data-template-id="location-title" class="canva-text mt-4 leading-tight"></h2>
+       <div class="mt-7 space-y-4">
+        <p data-template-id="location-brand" class="canva-text font-bold"></p>
+        <p data-template-id="location-address" class="canva-text"></p>
+        <p data-template-id="location-number" class="canva-text"></p>
+        <p data-template-id="location-city" class="canva-text"></p>
+       </div><a data-template-id="location-button" class="canva-button focus-ring mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3 font-bold" href="https://www.google.com/maps/search/?api=1&amp;query=Larabelle+Confeitaria" target="_blank" rel="noopener noreferrer"><i data-lucide="map-pin" class="h-5 w-5" aria-hidden="true"></i></a>
+      </div>
+      <div data-template-id="map-placeholder" class="canva-panel map-pattern flex min-h-[330px] items-center justify-center p-8">
+       <div class="rounded-3xl bg-[#fffaf4e8] p-7 text-center shadow-lg">
+        <i data-lucide="map-pinned" class="mx-auto h-9 w-9 text-[#bd7775]" aria-hidden="true"></i>
+        <p data-template-id="map-placeholder-title" class="canva-text mt-4 font-bold"></p>
+        <p data-template-id="map-placeholder-text" class="canva-text mt-2 text-sm"></p>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="contato" class="bg-white px-5 py-20 lg:px-8">
+     <div data-template-id="contact-section" class="canva-section mx-auto max-w-7xl rounded-[2.5rem] px-7 py-14 text-center sm:px-14">
+      <svg class="butterfly mx-auto h-10 w-12" viewbox="0 0 64 48" aria-hidden="true">
+       <path d="M32 24C23 5 7 3 4 13c-4 14 13 19 28 14-12 7-12 18-4 20 10 3 12-12 4-23ZM32 24C41 5 57 3 60 13c4 14-13 19-28 14 12 7 12 18 4 20-10 3-12-12-4-23Z" />
+      </svg>
+      <h2 data-template-id="contact-title" class="canva-text mt-4 leading-tight"></h2>
+      <p data-template-id="contact-description" class="canva-text mx-auto mt-5 max-w-2xl leading-relaxed"></p><a data-template-id="contact-whatsapp-button" class="canva-button focus-ring mt-8 inline-flex items-center gap-2 rounded-full px-7 py-4 font-bold shadow-sm transition hover:-translate-y-0.5" href="https://wa.me/?text=Olá%20Larabelle!%20Gostaria%20de%20fazer%20uma%20encomenda." target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle" class="h-5 w-5" aria-hidden="true"></i></a>
+      <div class="mx-auto mt-10 grid max-w-3xl gap-3 text-left sm:grid-cols-2">
+       <p data-template-id="contact-phone" class="canva-text rounded-xl bg-white/70 p-4 text-sm"></p>
+       <p data-template-id="contact-instagram" class="canva-text rounded-xl bg-white/70 p-4 text-sm"></p>
+       <p data-template-id="contact-facebook" class="canva-text rounded-xl bg-white/70 p-4 text-sm"></p>
+       <p data-template-id="contact-tiktok" class="canva-text rounded-xl bg-white/70 p-4 text-sm"></p>
+       <p data-template-id="contact-address" class="canva-text rounded-xl bg-white/70 p-4 text-sm sm:col-span-2"></p>
+      </div>
+     </div>
+    </section>
+   </main>
+   <footer data-template-id="footer-section" class="canva-footer px-5 py-12 lg:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-end md:justify-between">
+     <div>
+      <div class="flex items-center gap-2">
+       <svg class="butterfly h-7 w-9" viewbox="0 0 64 48" aria-hidden="true">
+        <path d="M32 24C23 5 7 3 4 13c-4 14 13 19 28 14-12 7-12 18-4 20 10 3 12-12 4-23ZM32 24C41 5 57 3 60 13c4 14-13 19-28 14 12 7 12 18 4 20-10 3-12-12-4-23Z" />
+       </svg>
+       <p data-template-id="footer-brand" class="canva-text brand-font text-3xl"></p>
+      </div>
+      <p data-template-id="footer-tagline" class="canva-text mt-3 text-sm"></p>
+     </div>
+     <div class="flex flex-wrap gap-x-5 gap-y-3 text-sm font-semibold">
+      <a data-template-id="footer-home" class="canva-link focus-ring" href="#inicio"></a><a data-template-id="footer-products" class="canva-link focus-ring" href="#produtos"></a><a data-template-id="footer-orders" class="canva-link focus-ring" href="#encomendas"></a><a data-template-id="footer-reviews" class="canva-link focus-ring" href="#avaliacoes"></a><a data-template-id="footer-location" class="canva-link focus-ring" href="#localizacao"></a><a data-template-id="footer-contact" class="canva-link focus-ring" href="#contato"></a>
+     </div>
+    </div>
+    <div class="mx-auto mt-9 flex max-w-7xl flex-col gap-4 border-t border-white/15 pt-6 sm:flex-row sm:items-center sm:justify-between">
+     <p data-template-id="footer-copyright" class="canva-text text-xs"></p>
+     <div class="flex gap-4">
+      <a class="focus-ring" href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i data-lucide="instagram" class="h-5 w-5" aria-hidden="true"></i></a><a class="focus-ring" href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i data-lucide="facebook" class="h-5 w-5" aria-hidden="true"></i></a><a class="focus-ring" href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i data-lucide="music-2" class="h-5 w-5" aria-hidden="true"></i></a>
+     </div>
+    </div>
+   </footer><a data-template-id="floating-whatsapp" class="canva-button focus-ring fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full shadow-xl transition hover:-translate-y-1" href="https://wa.me/?text=Olá%20Larabelle!%20Gostaria%20de%20fazer%20uma%20encomenda." target="_blank" rel="noopener noreferrer" aria-label="Pedir pelo WhatsApp"><i data-lucide="message-circle" class="h-7 w-7" aria-hidden="true"></i></a>
+  </div>
+  <script src="/_sdk/a051f9537983733d.editing_sdk.js" integrity="sha512-IWn3eBHnVt7zQ0Rp79J72qSgJoLbskCA9lcfY4retf+5km4LjuhSHpvx+182KCHmEZ6EbJtWqVsybpV8Sd8PQQ=="></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      lucide.createIcons();
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+      toggle.addEventListener("click", function () {
+        const open = menu.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", String(open));
+      });
+      menu.querySelectorAll("a").forEach(function(link) {
+        link.addEventListener("click", function () {
+          menu.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    });
+  </script>
+ </body>
 </html>
