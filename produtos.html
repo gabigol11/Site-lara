@@ -2,8 +2,9 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Produtos - Larabelle</title>
-  <link rel="stylesheet" href="/css/css.css">
+  <link rel="stylesheet" href="css.css">
 </head>
 <body>
   <header>
@@ -11,7 +12,7 @@
       <h1>Larabelle</h1>
       <nav>
         <a href="index.html">Início</a>
-        <a href="produtos.html">Produtos</a>
+        <a class="active" href="produtos.html">Produtos</a>
         <a href="promocoes.html">Promoções</a>
       </nav>
     </div>
@@ -19,14 +20,33 @@
 
   <main>
     <section class="container">
-      <h2>Todos os Produtos</h2>
+      <div class="page-title">
+        <span>CONHEÇA NOSSA COLEÇÃO</span>
+        <h2>Todos os Produtos</h2>
+        <p>Escolha seus favoritos e encontre seu novo estilo.</p>
+      </div>
+
       <div class="product-grid">
-        <div class="product-card"><img src="/images/batom1.webp"><p>Batom Violeta - R$ 39,90</p></div>
-        <div class="product-card"><img src="../images/base1.jpg"><p>Base Matte - R$ 59,90</p></div>
-        <div class="product-card"><img src="../images/blush1.jpg"><p>Blush Rosa - R$ 45,90</p></div>
-        <div class="product-card"><img src="../images/vestido1.jpg"><p>Vestido Violeta - R$ 159,90</p></div>
+        <article class="product-card">
+          <div class="product-image"><img src="images/batom1.webp" alt="Batom Violeta"></div>
+          <div class="product-info"><h3>Batom Violeta</h3><p>Acabamento elegante para todos os momentos.</p><strong>R$ 39,90</strong></div>
+        </article>
+        <article class="product-card">
+          <div class="product-image"><img src="images/base1.jpg" alt="Base Matte"></div>
+          <div class="product-info"><h3>Base Matte</h3><p>Cobertura uniforme com acabamento natural.</p><strong>R$ 59,90</strong></div>
+        </article>
+        <article class="product-card">
+          <div class="product-image"><img src="images/blush1.jpg" alt="Blush Rosa"></div>
+          <div class="product-info"><h3>Blush Rosa</h3><p>Um toque de cor para realçar sua beleza.</p><strong>R$ 45,90</strong></div>
+        </article>
+        <article class="product-card">
+          <div class="product-image"><img src="images/vestido1.jpg" alt="Vestido Violeta"></div>
+          <div class="product-info"><h3>Vestido Violeta</h3><p>Elegância e conforto para você.</p><strong>R$ 159,90</strong></div>
+        </article>
       </div>
     </section>
   </main>
+
+  <footer><p>&copy; 2025 Larabelle. Todos os direitos reservados.</p></footer>
 </body>
 </html>
